@@ -14,6 +14,7 @@
 <body>
 <h1>Gerenciamento de Hotéis</h1>
 <ul>
+<li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=RetornaBuscaInfoHoteis">FAZER RESERVA</a></li>
 <li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=ListarHoteis">Listar todos os hotéis</a></li>
 <li>Cadastrar novo hotel</li>
 <li>Alterar dados de um hotel já cadastrado</li>

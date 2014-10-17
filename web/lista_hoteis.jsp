@@ -30,6 +30,6 @@
             %>
         </table>
         
-        <p><a href="/HotelFrontControllerWeb/">Voltar à página inicial</a></p>
+        <p><a href="/HotelFrontControllerWeb31328334/index.jsp">Voltar à página inicial</a></p>
     </body>
 </html>
