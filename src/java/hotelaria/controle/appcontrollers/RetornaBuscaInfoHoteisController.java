@@ -22,6 +22,7 @@ public class RetornaBuscaInfoHoteisController extends AbstractApplicationControl
 
     @Override
     public void execute() {
+        String origem = getRequest().getParameter("origem");
         List<Hotel> hoteis;
         List<QuartoTipo> quartos;
 
@@ -30,7 +31,13 @@ public class RetornaBuscaInfoHoteisController extends AbstractApplicationControl
 
         hoteis = hoteldao.listar();
         quartos = quartoTipoDao.listar();
-        this.setReturnPage("/busca_hotel.jsp");
+
+        if (origem.equals("reserva")) {
+            this.setReturnPage("/busca_hotel.jsp");
+        } else {
+            this.setReturnPage("/cadastrar_quarto.jsp");
+        }
+
         this.getRequest().setAttribute("lista_hoteis", hoteis);
         this.getRequest().setAttribute("lista_quartos", quartos);
 

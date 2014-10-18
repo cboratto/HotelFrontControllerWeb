@@ -19,7 +19,7 @@ import java.util.List;
 public class HotelDaoImplementacao implements HotelDao {
 
     protected static final String CAMPOS = "id, nome, logradouro, numero";
-    protected static String INSERIR_SQL = "insert into app.hotel (" + CAMPOS + ") values (?, ?, ?)";
+    protected static String INSERIR_SQL = "insert into app.hotel (nome, logradouro, numero) values (?, ?, ?)";
     protected static String SELECT_ALL_SQL = "select " + CAMPOS + " from app.hotel";
     protected static String SELECT_SQL_ID = "select " + CAMPOS + " from app.hotel where id = ?";
     protected static String SELECT_SQL_NOME = "select " + CAMPOS + " from app.hotel where nome = ?";

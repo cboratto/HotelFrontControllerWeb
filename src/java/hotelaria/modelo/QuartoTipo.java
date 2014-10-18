@@ -15,10 +15,7 @@ public class QuartoTipo {
     String nomeQuartoTipo;
     int numCapacidadeMaxima;
 
-    public QuartoTipo(long id, String nomeQuartoTipo, int numCapacidadeMaxima) {
-        this.id = id;
-        this.nomeQuartoTipo = nomeQuartoTipo;
-        this.numCapacidadeMaxima = numCapacidadeMaxima;
+    public QuartoTipo() {
     }
 
     public long getId() {

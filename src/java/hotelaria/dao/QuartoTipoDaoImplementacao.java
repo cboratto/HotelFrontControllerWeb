@@ -54,8 +54,11 @@ public class QuartoTipoDaoImplementacao implements QuartoTipoDao {
             prepStmt = conn.prepareStatement(SELECT_ALL_SQL);
             rs = prepStmt.executeQuery();
             while (rs.next()) {
-                QuartoTipo quarto = new QuartoTipo(rs.getLong(1), rs.getString(2), rs.getInt(3));
-
+                QuartoTipo quarto = new QuartoTipo();
+                quarto.setId(rs.getLong(1));
+                quarto.setNomeQuartoTipo(rs.getString(2));
+                quarto.setNumCapacidadeMaxima(rs.getInt(3));
+               
                 quartos.add(quarto);
             }
         } catch (Exception e) {
