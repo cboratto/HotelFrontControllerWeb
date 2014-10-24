@@ -15,10 +15,11 @@
         <h3>Gerenciamento de Hotéis</h3>
         <ol>
             <li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=RetornaBuscaInfoHoteis&origem=reserva">Fazer Reserva</a></li>
-            <li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=ListarHoteis">Listar todos os hotéis</a></li>
             <li><a href="/HotelFrontControllerWeb31328334/cadastrar_hotel.jsp">Cadastrar novo hotel</a></li>
             <li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=RetornaBuscaInfoHoteis&origem=quarto">Cadastrar novo quarto</a></li>
             <li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=Listar&origem=usuario">Listar Usuários</a></li>
+            <li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=Listar&origem=hotel">Listar todos os hotéis</a></li>
+            <li><a href="/HotelFrontControllerWeb31328334/FrontControllerServlet?control=Listar&origem=quarto">Listar todos os quartos</a></li>
             <li><a href="/HotelFrontControllerWeb31328334/cadastrar_usuario.jsp">Cadastrar novo usuario</a></li>
             <li>Remover um hotel cadastrado</li>
             <li><a href="/HotelFrontControllerWeb31328334/HotelBuscaID.jsp">Buscar pelo ID do Hotel</a></li>

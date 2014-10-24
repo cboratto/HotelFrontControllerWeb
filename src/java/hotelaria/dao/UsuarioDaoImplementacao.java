@@ -64,7 +64,7 @@ public class UsuarioDaoImplementacao implements UsuarioDao {
             while (rs.next()) {
                 usuario = new Usuario();
 
-                usuario.setId(rs.getInt("id"));
+                usuario.setId(rs.getInt("id_usuario"));
                 usuario.setNome(rs.getString("nome"));
 
 

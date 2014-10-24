@@ -33,25 +33,24 @@ public class ListarController extends AbstractApplicationController {
             UsuarioDao usuariodao = new UsuarioDaoImplementacao();
 
             usuarios = usuariodao.listar();
-            this.getRequest().setAttribute(origem, usuarios);
+            this.getRequest().setAttribute("lista_usuarios", usuarios);
             this.setReturnPage("/lista_usuarios.jsp");
-            
+
         } else if (origem.equals("hotel")) {
 
             HotelDao hotelDao = new HotelDaoImplementacao();
             List<Hotel> hoteis = hotelDao.listar();
-            
+
             this.setReturnPage("/lista_hoteis.jsp");
             this.getRequest().setAttribute("lista_hoteis", hoteis);
-        } else if (origem.equals("quarto")){
+        } else if (origem.equals("quarto")) {
             List<Quarto> quartos = new ArrayList<Quarto>();
             QuartoDao quartodao = new QuartoDaoImplementacao();
-            
+
             quartos = quartodao.listar();
             this.setReturnPage("/lista_quartos.jsp");
             this.getRequest().setAttribute("lista_quartos", quartos);
         }
-        
 
     }
 
