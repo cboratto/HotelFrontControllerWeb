@@ -14,6 +14,7 @@ import hotelaria.dao.UsuarioDao;
 import hotelaria.dao.UsuarioDaoImplementacao;
 import hotelaria.modelo.Hotel;
 import hotelaria.modelo.Quarto;
+import hotelaria.modelo.QuartoTipo;
 import hotelaria.modelo.Usuario;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,35 @@ public class ListarController extends AbstractApplicationController {
             quartos = quartodao.listar();
             this.setReturnPage("/lista_quartos.jsp");
             this.getRequest().setAttribute("lista_quartos", quartos);
+        } else if (origem.equals("buscaQuartos")) {
+            Long idHotel = null;
+            Long idQuartoTipo= null;
+            try {
+                idHotel = Long.parseLong(getRequest().getParameter("hotelSelecionado"));
+            } catch (Exception e) {
+                idHotel = Long.parseLong("999");
+            }
+            try {
+                idQuartoTipo = idQuartoTipo = Long.parseLong(getRequest().getParameter("quartoSelecionado"));
+            } catch (Exception e) {
+                idQuartoTipo = Long.parseLong("999");
+            }
+
+            Quarto quarto = new Quarto();
+            quarto.setHotel(new Hotel());
+            quarto.setQuartoTipo(new QuartoTipo());
+
+            quarto.getHotel().setId(idHotel);
+            quarto.getQuartoTipo().setId(idQuartoTipo);
+
+            QuartoDaoImplementacao quartobd = new QuartoDaoImplementacao();
+            List<Quarto> quartos = new ArrayList<Quarto>();
+
+            quartos = quartobd.findQuartos(quarto);
+
+            this.setReturnPage("/selecionar_quarto.jsp");
+            this.getRequest().setAttribute("lista_quartos_disponiveis", quartos);
+
         }
 
     }

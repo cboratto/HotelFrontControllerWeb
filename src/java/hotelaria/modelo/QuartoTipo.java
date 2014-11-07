@@ -11,18 +11,18 @@ package hotelaria.modelo;
  */
 public class QuartoTipo {
 
-    long id;
+    Long id;
     String nomeQuartoTipo;
     int numCapacidadeMaxima;
 
     public QuartoTipo() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
